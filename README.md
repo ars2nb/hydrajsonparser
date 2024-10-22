@@ -1,3 +1,3 @@
 # Hydra JSON parser
 
-Web: hydrajsonparser.zya.me
+Web: http://hydrajsonparser.zya.me
