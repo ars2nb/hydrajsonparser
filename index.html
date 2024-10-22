@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Hydra JSON parser</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <div class="container">
+         <h1>Hydra JSON parser</h1>
+         <form id="downloadForm">
+            <input type="text" id="jsonLinkInput" placeholder="https://example.com/file.json" />
+            <button type="submit" id="jsonDownloadButton">Download</button>
+         </form>
+
+         <form id="searchForm">
+            <input type="search" id="searchInput" placeholder="Search games..." />
+         </form>
+
+         <div>
+            <table>
+               <thead>
+                  <th colspan="3" id="tableTitle">unnamed</th>
+               </thead>
+               <tbody id="tableBody">
+                  <tr>
+                     <td class="titleNumber">-</td>
+                     <td class="titleText">unknown</td>
+                     <td class="titleSize">no size</td>
+                  </tr>
+               </tbody>
+            </table>
+            <div class="middle-text">
+               <p>Design by ars3nb, Developer by spark198rus</p>
+            </div>
+         </div>
+      </div>
+
+
+      <script src="parser.js"></script>
+      <script>
+         // JavaScript code for live search functionality
+         document.getElementById('searchInput').addEventListener('input', liveSearch);
+
+         function liveSearch() {
+            var input = document.getElementById('searchInput').value.toLowerCase();
+            var table = document.getElementById('tableBody');
+            var rows = table.getElementsByTagName('tr');
+
+            for (var i = 0; i < rows.length; i++) {
+               var row = rows[i];
+               var text = row.textContent.toLowerCase();
+               if (text.includes(input)) {
+                  row.style.display = 'table-row';
+               } else {
+                  row.style.display = 'none';
+               }
+            }
+         }
+      </script>
+   </body>
+</html>

@@ -1,0 +1,167 @@
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Fira Mono', monospace;
+    }
+
+    body {
+      background: #1a1a1a;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+      color: #00ff9d;
+      text-shadow: 0 0 10px rgba(0, 255, 157, 0.3);
+    }
+
+    h3 {
+      font-size: 1rem;
+      color: #888;
+      margin-bottom: 2rem;
+    }
+
+    #downloadForm {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    input {
+      flex: 1;
+      padding: 0.8rem 1rem;
+      border: 2px solid #333;
+      border-radius: 4px;
+      background: #2a2a2a;
+      color: #fff;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #00ff9d;
+      box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+    }
+
+    button {
+      padding: 0.8rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      background: #00ff9d;
+      color: #1a1a1a;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background: #00cc7d;
+      transform: translateY(-2px);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: #2a2a2a;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    th {
+      background: #333;
+      padding: 1rem;
+      text-align: left;
+      font-size: 1.2rem;
+      color: #00ff9d;
+    }
+
+    td {
+      padding: 1rem;
+      border-bottom: 1px solid #333;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+.titleNumber {
+   width: 50px;
+   text-align: left;
+   color: #888;
+}
+
+.titleText {
+   color: #e0e0e0;
+   text-align: left;
+}
+
+.titleSize {
+   width: 100px;
+   text-align: right;
+   color: #00ff9d;
+   white-space: nowrap;
+}
+
+
+    tr:hover {
+      background: #333;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .container > * {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+
+    @media (max-width: 600px) {
+      #downloadForm {
+        flex-direction: column;
+      }
+      
+      button {
+        width: 100%;
+      }
+    }
+
+#searchForm {
+   display: flex;
+   gap: 1rem;
+   margin-bottom: 1rem;
+}
+
+#searchInput {
+   flex: 1;
+   padding: 0.8rem 1rem;
+   border: 2px solid #333;
+   border-radius: 4px;
+   background: #2a2a2a;
+   color: #fff;
+   font-size: 1rem;
+   transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+   outline: none;
+   border-color: #00ff9d;
+   box-shadow: 0 0 10px rgba(0, 255, 157, 0.2);
+}
